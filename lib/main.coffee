@@ -1,15 +1,15 @@
 ton = require 'ton'
-bson = require 'bson'
+mongo = require 'mongodb'
 
-global.ObjectID = bson.ObjectID
-global.DBRef = bson.DBRef
-global.Binary = bson.Binary
-global.Timestamp = bson.Timestamp
-global.MinKey = bson.MinKey
-global.MaxKey = bson.MaxKey
-global.Code = bson.Code
-global.Long = bson.Long
-global.Double = bson.Double
+global.ObjectID = mongo.ObjectID
+global.DBRef = mongo.DBRef
+global.Binary = mongo.Binary
+global.Timestamp = mongo.Timestamp
+global.MinKey = mongo.MinKey
+global.MaxKey = mongo.MaxKey
+global.Code = mongo.Code
+global.Long = mongo.Long
+global.Double = mongo.Double
 
 ton.add "ObjectID", (val) -> "new ObjectID(\"#{val}\")" if val instanceof ObjectID
 ton.add "DBRef", (val) -> "new DBRef(\"#{val.namespace}\", new ObjectID(\"#{val.oid}\"), \"#{val.db}\")" if val instanceof DBRef

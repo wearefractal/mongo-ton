@@ -1,14 +1,14 @@
-![status](https://secure.travis-ci.org/wearefractal/bson-ton.png?branch=master)
+![status](https://secure.travis-ci.org/wearefractal/mongo-ton.png?branch=master)
 
 ## Information
 
 <table>
 <tr> 
-<td>Package</td><td>bson-ton</td>
+<td>Package</td><td>mongo-ton</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>BSON/MongoDB types for ton</td>
+<td>MongoDB native types for ton</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -16,11 +16,13 @@
 </tr>
 </table>
 
+This is identical to bson-ton but uses node-mongodb-native types which differ slightly.
+
 ## Usage
 
 ```coffee-script
 ton = require 'ton'
-require 'bson-ton'
+require 'mongo-ton'
 
 str = ton.stringify {bson doc}
 doc = ton.parse str

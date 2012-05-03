@@ -20,7 +20,7 @@ doc =
   ref: new DBRef('space', new ObjectID("4fa202c54cc3da640c000002"), 'stuff')
   arr: [1, 2, 3]
 
-describe 'bson-ton', ->
+describe 'mongo-ton', ->
   describe 'stringify()', ->
     it 'should work', (done) ->
       str = ton.stringify doc

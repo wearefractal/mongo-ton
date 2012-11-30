@@ -13,7 +13,7 @@ global.Double = mongo.Double
 
 getClass = (obj) ->
   return "undefined" if typeof obj is "undefined"
-  return "null" if typeof obj is "null"
+  return "null" unless obj?
   return obj.constructor.name if obj.constructor?.name?
   return Object.prototype.toString.call(obj).match(/^\[object\s(.*)\]$/)[1]
 
